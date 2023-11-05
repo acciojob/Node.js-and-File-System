@@ -1,11 +1,14 @@
-const http = require('http');
+const fs = require('fs');
+const readline = require('readline');
 
-const server = http.createServer((req, res) => {
-  // TODO: Implement this function
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-server.listen(3000, () => {
-  console.log('Server is listening on port 3000');
+rl.question('Enter the filename: ', (filename) => {
+  rl.question('Enter the word to remove: ', (word) => {
+    // TODO: Implement this function
+    rl.close();
+  });
 });
-
-module.exports = { server };
